@@ -1,52 +1,25 @@
-import { GrMapLocation } from 'react-icons/gr';
-import { BiBuildings } from 'react-icons/bi';
-
 import { Avatar } from '../fundation/Avatar';
 
-import ProfileImage from '../../assets/theGreatFather.jpg';
+import ProfileImage from '../../assets/theGoodfather.jpg';
+import BackgroundImage from '../../assets/bgTheGoodfather.png';
 
-import { Container, UserInformations, User, UserDetails } from './styles';
+import { Container, BoxBackgroundTop, BoxBackgroundBottom } from './styles';
+import { UserData } from './UserData';
+import { UserDetails } from './UserDetails';
+import { UserInformations } from './UserInformations';
 
 const UserProfile: React.FC = () => (
   <Container>
+    <BoxBackgroundTop src={BackgroundImage} />
+
     <Avatar src={ProfileImage} title="Imagem de perfil" size={100} />
 
     <UserInformations>
-      <User>
-        <h1>Marlon Brando</h1>
-        <h4>@thegreatfather</h4>
-        <span>Actor</span>
-      </User>
+      <UserData username="@thegoodfather" name="Marlom Brando" career="Actor" />
 
-      <UserDetails>
-        <div>
-          <GrMapLocation />
-          Omaha/Nebraska - USA
-        </div>
-
-        <div>
-          <span>
-            <BiBuildings />
-            Paramount Pictures
-          </span>
-          <span>
-            <BiBuildings />
-            Paramount Pictures
-          </span>
-        </div>
-
-        <div>
-          <span>
-            <BiBuildings />
-            Paramount Pictures
-          </span>
-          <span>
-            <BiBuildings />
-            Paramount Pictures
-          </span>
-        </div>
-      </UserDetails>
+      <UserDetails company="Paramount" college="UCLA" />
     </UserInformations>
+    <BoxBackgroundBottom />
   </Container>
 );
 

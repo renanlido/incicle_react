@@ -8,12 +8,12 @@ export default createGlobalStyle`
   }
 
   body {
-  background: '#F2F4F5';
-  color: '#727172';
+  background: ${props => props.theme.colors.gray100};
+  color: ${props => props.theme.colors.gray200};
   }
 
   h1 {
-  color: '#116096';
+  color: ${props => props.theme.colors.blue100};
   }
 
   body,

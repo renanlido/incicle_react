@@ -6,7 +6,8 @@ const theme = {
     gray200: '#727172',
     gray300: '#787775',
     gray400: '#474747',
-    blue100: '#116096'
+    blue100: '#116096',
+    green100: '#227794'
   },
   sizes: {
     xsmall: '0.624rem',

@@ -10,6 +10,7 @@ export default createGlobalStyle`
   body {
   background: ${props => props.theme.colors.gray100};
   color: ${props => props.theme.colors.gray200};
+  width: 100vw;
   }
 
   h1 {

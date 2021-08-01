@@ -6,13 +6,19 @@ import { BiBuildings } from 'react-icons/bi';
 import { Container } from './styles';
 
 type UserDetailsProps = {
+  city: string;
+  state: string;
+  country: string;
   company: string;
   college: string;
 };
 
 export const UserDetails: React.FC<UserDetailsProps> = ({
   company,
-  college
+  college,
+  city,
+  state,
+  country
 }) => {
   const { colors } = useTheme();
 
@@ -20,7 +26,7 @@ export const UserDetails: React.FC<UserDetailsProps> = ({
     <Container>
       <div className="location">
         <FaMapMarkedAlt color={colors.blue100} />
-        Omaha/Nebraska - USA
+        {`${city}/${state} - ${country}`}
       </div>
 
       <div className="formation">

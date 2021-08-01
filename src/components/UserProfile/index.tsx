@@ -15,9 +15,15 @@ const UserProfile: React.FC = () => (
     <Avatar src={ProfileImage} title="Imagem de perfil" size={100} />
 
     <UserInformations>
-      <UserData username="@thegoodfather" name="Marlom Brando" career="Actor" />
+      <UserData username="@thegoodfather" name="Marlon Brando" career="Actor" />
 
-      <UserDetails company="Paramount" college="UCLA" />
+      <UserDetails
+        city="Omaha"
+        state="Nebraska"
+        country="USA"
+        company="Paramount"
+        college="UCLA"
+      />
     </UserInformations>
     <BoxBackgroundBottom />
   </Container>

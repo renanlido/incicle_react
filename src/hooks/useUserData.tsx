@@ -20,7 +20,6 @@ type UserDataContextType = {
   };
 };
 
-
 const UserDataContext = createContext({} as UserDataContextType);
 
 export function UserDataContextProvider({ children }: UserDataProps) {

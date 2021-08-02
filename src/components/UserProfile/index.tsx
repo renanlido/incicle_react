@@ -7,26 +7,33 @@ import { Container, BoxBackgroundTop, BoxBackgroundBottom } from './styles';
 import { UserData } from './UserData';
 import { UserDetails } from './UserDetails';
 import { UserInformations } from './UserInformations';
+import { useUserData } from '../../hooks/useUserData';
 
-const UserProfile: React.FC = () => (
-  <Container>
-    <BoxBackgroundTop src={BackgroundImage} />
+export const UserProfile: React.FC = () => {
+  const { userData } = useUserData();
 
-    <Avatar src={ProfileImage} title="Imagem de perfil" size={100} />
+  return (
+    <Container>
+      <BoxBackgroundTop src={BackgroundImage} />
 
-    <UserInformations>
-      <UserData username="@thegoodfather" name="Marlon Brando" career="Actor" />
+      <Avatar src={ProfileImage} title="Imagem de perfil" size={100} />
 
-      <UserDetails
-        city="Omaha"
-        state="Nebraska"
-        country="USA"
-        company="Paramount"
-        college="UCLA"
-      />
-    </UserInformations>
-    <BoxBackgroundBottom />
-  </Container>
-);
+      <UserInformations>
+        <UserData
+          username={userData.userName}
+          name={userData.name}
+          career={userData.employee}
+        />
 
-export default UserProfile;
+        <UserDetails
+          city={userData.city}
+          state={userData.state}
+          country={userData.country}
+          company={userData.company}
+          college={userData.college}
+        />
+      </UserInformations>
+      <BoxBackgroundBottom />
+    </Container>
+  );
+};

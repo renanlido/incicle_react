@@ -2,7 +2,7 @@
 import { GrNotes } from 'react-icons/gr';
 import { IoImagesOutline } from 'react-icons/io5';
 import { VscDeviceCameraVideo } from 'react-icons/vsc';
-import { Input } from '../fundation/form/Input';
+import { Input } from '../fundation/userActions/Input';
 import { Icons } from './Icons';
 
 import { Container } from './styles';

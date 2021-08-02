@@ -10,6 +10,10 @@ export const Container = styled.div`
     width: 100%;
     padding: 10px;
     border: none;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   svg > path {

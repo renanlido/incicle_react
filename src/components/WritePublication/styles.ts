@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { darken } from 'polished';
 
 export const Container = styled.section`
   display: flex;
@@ -14,7 +15,7 @@ export const Container = styled.section`
 
   .footer {
     padding: 10px 20px;
-    background: ${props => props.theme.colors.gray100};
+    background: ${props => darken(0.1, props.theme.colors.gray100)};
     border-radius: 10px;
 
     span {

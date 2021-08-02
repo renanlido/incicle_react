@@ -20,7 +20,6 @@ type UserDataContextType = {
   };
 };
 
-// CONTEXT TO DROP BUTTONS AND MENUS
 
 const UserDataContext = createContext({} as UserDataContextType);
 

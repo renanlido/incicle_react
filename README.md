@@ -1,4 +1,4 @@
-In the project directory, you can run:
+Clone this project and in the project directory, you can run:
 
 ### `yarn start`
 
